@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ItemService } from '../services/item.service';
+import { ItemService } from '../../services/item.service';
 
 @Component({
   selector: 'app-createpost',
