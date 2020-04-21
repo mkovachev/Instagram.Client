@@ -12,11 +12,9 @@ import { AuthService } from './auth.service';
 export class ItemService {
   private itemPath = environment.apiUrl + 'items';
 
-  constructor(private http: HttpClient, private authService: AuthService) { }
+  constructor(private http: HttpClient) { }
 
   create(data): Observable<Item> {
-    let headers = new HttpHeaders();
-    headers = headers.set('Authorization', `Bearer ${this.authService.getToken()}`);
     return this.http.post<Item>(this.itemPath, data);
   }
 }
